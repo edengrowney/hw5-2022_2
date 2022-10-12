@@ -1,5 +1,6 @@
 
 
+/* create the animation with keyframes to be implemented later on */
 @keyframes logoAnimation{
     0% {
       width: 25px;
@@ -12,7 +13,7 @@
 
   }
 
-
+/* using logo id to stlye and use my created animation with a duration */
 #logo {
     align-self: center;
     width: 475px; 
@@ -20,6 +21,7 @@
     animation-duration: 5s;
 }
 
+/* background image with a substitute color */
 body{
     font-family: "Poppins", sans-serif;
      background: url("../concrete_seamless.png");
@@ -28,6 +30,8 @@ body{
      flex-direction: column;
 }
 
+
+/* styling the default header on mobile  */
 header{
     display: flex;
     flex-direction: column;
@@ -35,7 +39,7 @@ header{
     justify-content: center;
 }
 
-/* know its a column and cant figure out  */
+/* styling the default nav, nav_links, and nav_items on mobile  */
 .nav_links{
     display: flex; 
     flex-direction: column;
@@ -50,6 +54,8 @@ header{
     color: blue;
 }
 
+
+/* styling the default pricing class and card class on mobile  */
 .card > header {
     background-color: #288088;
     border: #45ADAD solid 2px;
@@ -67,6 +73,7 @@ header{
     
 }
 
+
 .pricing{
     display: flex;
     flex-direction: row;
@@ -78,6 +85,7 @@ header{
     justify-content: center;
 }
 
+/* styling the default gallery on mobile  */
 .gallery{
     display: flex;
     flex-wrap: wrap;
@@ -93,6 +101,9 @@ header{
 }
 
 
+
+
+/* styling desktop  */
 @media (min-width: 900px){
     header{
         display: flex;
@@ -128,6 +139,8 @@ header{
 
 }
 
+/* adjusting the accesibility by being able to chage motion to be off */
+
 @media (prefers-reduced-motion) {
     .animation {
       animation: none
@@ -135,6 +148,7 @@ header{
 }
 
 
+/* styling print view  */
 @media print{
 
     body{
@@ -168,15 +182,19 @@ header{
         align-self:flex-end;
     }
 
-    .gallery, #gallery{
+    .gallery{
         display: none;
+    }
+
+    #gallery{
+        visibility: hidden;
+
     }
 
     .card ul li:nth-child(2)::after{
         content: "👍"
     }
 }
-
 
 
 
